@@ -14,6 +14,7 @@ A minimal drumset included 3 instruments: Hi-Hat, Snare & Kick
 Since the uncoditional version of WaveNet is used, 3 separate
 neural networks were trained sequentially.
 Each instrument was trained from 20 samples; the [playlist](https://soundcloud.com/oouuli/sets/drummachine) includes a concatenated version of all the training samples. 16 kHz samples were used, cut to equal length (0.1s for Hi-Hat and 0.2s for the others).
+
 Training was performed for 180k, 132k and 380k epochs respectively
 (until the loss reached a threshold of 0.01).
 This threshold was probably way too low...
@@ -24,13 +25,18 @@ a little bit of noise. Generation was around 25x slower than real time on a GTX 
 
 Next a simple sequencer script was used to render random samples into a beat.
 Every rendered beat contains no sample twice.
-To repeat: The neural network did not directly generate the output sample.
 No further post-processing was applied (eq and compression would do wonders).
+
+To repeat: The neural network did not directly generate the output sample.
 
 
 ## Does it grove?
 
 The [playlist](https://soundcloud.com/oouuli/sets/drummachine) includes two examples of rendered beats.
+
 Clearly the instruments didn't converge equally well:
-Hi-Hats > Snares > Kicks, in my opinion
-Also I suspect the networks overfitted due to the long training, which is audible e.g. the Hi-Hat often replicates a few very distinct samples, which are nearly identical. Nevertheless I think the final beat could get the powernoise house crowd moving.
+Hi-Hats > Snares > Kicks, in my opinion.
+
+I also suspect the networks overfitted due to the long training, which is audible e.g. the Hi-Hat often replicates a few very distinct samples, which are nearly identical.
+
+Nevertheless I think the final beat could get the powernoise house crowd moving.
