@@ -24,7 +24,7 @@ Seeds were randomly selected from the initial values of the 20 samples +
 a little bit of noise. Generation was around 25x slower than real time on a GTX 1080.
 
 Next a simple sequencer script was used to render random samples into a beat.
-Every rendered beat contains no sample twice.
+Each rendered beat contains only unique samples.
 No further post-processing was applied (eq and compression would do wonders).
 
 To repeat: The neural network did not directly generate the output sample.
